@@ -285,7 +285,7 @@ header a:hover {
 
 .signin-page-box{
   position: fixed;
-  top: 30%;
+  top: 60px;
   width: 30%;
   height: 60vh;
   opacity: 0;
@@ -338,7 +338,7 @@ header a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-    width: 50%;
+  width: 50%;
   height: 40px;
   font-size: 20px;
   font-weight: 700;
@@ -369,6 +369,26 @@ header a:hover {
 
 @keyframes openSigninAnimation{
   to{
-    
+     filter: blur(0);
+     opacity: 1;
+     top: 30px;
+  }
+}
+
+/* close sign-in */
+.closeSignin{
+  animation: closeSigninAnimation 0.7s forwards;
+}
+
+@keyframes closeSigninAnimation{
+  from{
+    filter: blur(0);
+    opacity: 1;
+    top: 30px;
+  }
+  to{
+    filter: blur(10px);
+    opacity: 0;
+    top: 60px;
   }
 }
