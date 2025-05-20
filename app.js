@@ -13,9 +13,11 @@ const signinPage = document.getElementById('signinPage');
 const closeIcon = document.getElementById('closeIcon');
 
 signinButton.addEventListener('click', function(){
-  signinPage.classList.add('openSignin')
+  signinPage.classList.remove('closeSignin');
+  signinPage.classList.add('openSignin');
 });
 
 closeIcon.addEventListener('click', function(){
-  signinPage.classList.add('closeSignin')
+  signinPage.classList.remove('openSignin');
+  signinPage.classList.add('closeSignin');
 })
