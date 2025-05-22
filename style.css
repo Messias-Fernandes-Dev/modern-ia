@@ -893,6 +893,12 @@ header a:hover {
   border-top: 0;
 }
 
+.roadmap-section h1{
+  font-size: 70px;
+  text-align: center;
+  margin-top: 200px;
+}
+
 .roadmap-section .roadmap-card{
   border: 0.5px solid rgba(107, 88, 116, 0.5);
   position: relative;
@@ -998,4 +1004,75 @@ footer .box-icons a{
 
 footer .box-icons a:hover{
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.217);
+}
+
+/* auto display animation */
+
+.autoDisplay{
+  animation: autoDisplayAnimation;
+  animation-timeline: view();
+}
+
+@keyframes autoDisplayAnimation{
+  from{
+    filter: blur(10px);
+    transform: translateY(-200px) scale(0.5);
+  }50%{
+    filter: blur(0px);
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* fade in left */
+
+.fadeInRight{
+  animation: fadeInRightAnimation;
+  animation-timeline: view();
+}
+
+@keyframes fadeInRightAnimation{
+  0%{
+    opacity: 0;
+    transform: translateX(500px) scale(0.2);
+  } 35%, 50%{
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+.fadeInLeft{
+  animation: fadeInLeftAnimation;
+  animation-timeline: view();
+}
+
+@keyframes fadeInLeftAnimation{
+  0%{
+    opacity: 0;
+    transform: translateX(-500px) scale(0.2);
+  } 35%, 50%{
+    opacity: 1;
+    transform: translateX(0px) scale(1);
+  }
+}
+
+/* auto blur */
+
+.autoBlur{
+  animation: autoBlurAnimation linear both;
+  animation-timeline: view();
+}
+
+@keyframes autoBlurAnimation{
+  0%{
+    filter: blur(40px);
+  }
+
+  30%, 70%{
+    filter: blur(0);
+    opacity: 1;
+  }
+  100%{
+    filter: blur(40px);
+    opacity: 0;
+  }
 }
