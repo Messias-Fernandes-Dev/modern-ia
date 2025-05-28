@@ -21,3 +21,19 @@ closeIcon.addEventListener('click', function(){
   signinPage.classList.remove('openSignin');
   signinPage.classList.add('closeSignin');
 })
+
+//sidebar elements
+const sideBar = document.querySelector('.sidebar');
+const menuButton = document.querySelector('.menu-icon');
+const closeButton = document.querySelector('.close-icon');
+
+// open sidebar
+menuButton.addEventListener("click", function(){
+  sideBar.classList.remove('close-sidebar');
+  sideBar.classList.add('open-sidebar');
+})
+
+closeButton.addEventListener('click', function(){
+  sideBar.classList.remove('open-sidebar');
+  sideBar.classList.add('close-sidebar');
+})
